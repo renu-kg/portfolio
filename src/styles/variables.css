@@ -1,0 +1,105 @@
+/* Design Tokens: The Editorial Engineer System - Soft Pastel Stationery Atmosphere */
+:root {
+  /* Canvas & Base Surfaces */
+  --bg-canvas: #FAF9F6;        /* Stone 50 - Warm organic off-white / cream */
+  --bg-card: #FFFFFF;          /* Pure white card surface */
+  --bg-subtle: #F4F3EF;        /* Soft stone background */
+  --bg-accent-hover: #E7E5E4;  /* Stone 200 */
+
+  /* Borders & Dividers */
+  --border-subtle: #E5E3DF;    /* Restrained grid border */
+  --border-medium: #D4D1C9;    /* Stone 300 */
+  --border-focus: #1C1917;     /* High contrast focus ring */
+
+  /* Typography */
+  --text-primary: #1C1917;     /* Stone 900 - Near-black charcoal */
+  --text-secondary: #44403C;   /* Stone 700 - Dark slate */
+  --text-muted: #78716C;       /* Stone 500 - Soft caption grey */
+  --text-tertiary: #A8A29E;    /* Stone 400 */
+
+  /* Pastel Surface Tints (Noticeable Soft Pastel Surfaces) */
+  --card-tint-blue: #F0F6FE;     /* Soft powder blue card surface */
+  --card-tint-mint: #F0FAF4;     /* Soft mint / sage card surface */
+  --card-tint-yellow: #FFFDF0;   /* Soft pale yellow card surface */
+  --card-tint-blush: #FFF5F3;    /* Soft blush pink card surface */
+  --card-tint-lavender: #FAF5FF; /* Soft lavender card surface */
+
+  /* Muted Pastel Accents & Badges */
+  --pastel-blue-bg: #E0EEFE;
+  --pastel-blue-text: #026597;
+  --pastel-blue-border: #BAE0FD;
+
+  --pastel-sage-bg: #E2F7ED;
+  --pastel-sage-text: #117237;
+  --pastel-sage-border: #BCF0D6;
+
+  --pastel-lavender-bg: #F3E8FF;
+  --pastel-lavender-text: #6B21A8;
+  --pastel-lavender-border: #E9D5FF;
+
+  --pastel-peach-bg: #FFEAD5;
+  --pastel-peach-text: #C2410C;
+  --pastel-peach-border: #FED7AA;
+
+  --pastel-blush-bg: #FDE8E8;
+  --pastel-blush-text: #9B1C1C;
+  --pastel-blush-border: #FBD5D5;
+
+  --pastel-yellow-bg: #FEF9C3;
+  --pastel-yellow-text: #854D0E;
+  --pastel-yellow-border: #FEF08A;
+
+  /* Fonts */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'Newsreader', Georgia, serif;
+
+  /* Typography Scale */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.625rem;   /* 26px */
+  --font-size-3xl: 2.125rem;   /* 34px */
+  --font-size-4xl: 2.75rem;    /* 44px */
+
+  /* Line Heights */
+  --lh-tight: 1.15;
+  --lh-heading: 1.25;
+  --lh-body: 1.65;
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 4px 16px -2px rgba(28, 25, 23, 0.06);
+  --shadow-lg: 0 12px 32px -4px rgba(28, 25, 23, 0.08);
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  /* Layout Max Width */
+  --max-width-site: 1160px;
+  --header-height: 72px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
