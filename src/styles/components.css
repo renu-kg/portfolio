@@ -875,63 +875,139 @@
 }
 
 /* ==========================================================================
-   06. CURRENTLY LEARNING (SINGLE-ROW COMPACT FOCUS CARDS)
+   06. CURRENTLY LEARNING (EDITORIAL BENTO FOCUS CARDS - MODERN UI/UX)
    ========================================================================== */
+.learning-bento-grid,
 .learning-cards-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
   width: 100%;
 }
 
-@media (max-width: 960px) {
+.learning-focus-card,
+.learning-card {
+  background: linear-gradient(145deg, #FFFFFF 65%, #FAF9FB 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+}
+
+.learning-focus-card:hover,
+.learning-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-md);
+}
+
+/* Featured card spans 2 columns in the 3-column bento */
+.learning-focus-card.focus-card-featured {
+  grid-column: span 2;
+  background: linear-gradient(145deg, #FFFFFF 50%, #ECFDF5 100%);
+  border-color: var(--pastel-sage-border);
+}
+
+@media (max-width: 900px) {
+  .learning-bento-grid,
   .learning-cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .learning-focus-card.focus-card-featured {
+    grid-column: span 2;
   }
 }
 
 @media (max-width: 640px) {
+  .learning-bento-grid,
   .learning-cards-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: var(--space-3);
+  }
+  .learning-focus-card.focus-card-featured {
+    grid-column: span 1;
   }
 }
 
-.learning-card {
-  background: linear-gradient(145deg, #FFFFFF 65%, #FAF5FF 100%);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 14px 14px;
+.focus-card-header {
   display: flex;
-  flex-direction: column;
-  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  gap: var(--space-2);
 }
 
-.learning-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--pastel-lavender-border);
-  box-shadow: var(--shadow-sm);
-}
-
-.learning-icon {
+.focus-icon-frame {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.35rem;
-  margin-bottom: 8px;
   line-height: 1;
 }
 
-.learning-topic {
-  font-size: var(--font-size-xs);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 4px;
-  line-height: 1.35;
+.focus-icon-sage {
+  background-color: var(--pastel-sage-bg);
+  border: 1px solid var(--pastel-sage-border);
 }
 
+.focus-icon-lavender {
+  background-color: var(--pastel-lavender-bg);
+  border: 1px solid var(--pastel-lavender-border);
+}
+
+.focus-icon-blue {
+  background-color: var(--pastel-blue-bg);
+  border: 1px solid var(--pastel-blue-border);
+}
+
+.focus-icon-peach {
+  background-color: var(--pastel-blush-bg);
+  border: 1px solid var(--pastel-blush-border);
+}
+
+.focus-icon-yellow {
+  background-color: var(--pastel-yellow-bg);
+  border: 1px solid var(--pastel-yellow-border);
+}
+
+.focus-card-title,
+.learning-topic {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  line-height: var(--lh-heading);
+}
+
+.focus-card-desc,
 .learning-desc {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+}
+
+.focus-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.focus-card-tags .tech-tag {
   font-size: 11px;
-  color: var(--text-muted);
-  line-height: 1.45;
+  padding: 3px 8px;
 }
 
 /* ==========================================================================

@@ -576,29 +576,54 @@ export const educationData = {
 
 export const currentlyLearning = [
   {
-    topic: "Business Intelligence & ETL",
+    id: "focus-atlas",
+    topic: "Business Intelligence & Enterprise ETL",
     icon: "📊",
-    description: "Enterprise data pipelines, ETL architectures, and StarRocks analytics at Atlas Systems."
+    badgeText: "Atlas Systems Focus",
+    badgeColor: "sage",
+    featured: true,
+    description: "Enterprise data pipelines, ETL architectures, and high-performance analytics data warehousing with StarRocks at Atlas Systems.",
+    tags: ["StarRocks", "ETL Pipelines", "Enterprise Analytics"]
   },
   {
+    id: "focus-java",
+    topic: "Java & Enterprise Systems",
+    icon: "☕",
+    badgeText: "Primary Focus",
+    badgeColor: "lavender",
+    featured: false,
+    description: "Deepening core Java ecosystem knowledge, OOP design principles, Collections framework, and scalable backend architecture.",
+    tags: ["Core Java", "OOP", "Backend Design"]
+  },
+  {
+    id: "focus-aiml",
     topic: "AI/ML & Agentic Architectures",
     icon: "✨",
-    description: "Generative models, multimodal systems, and emerging agentic workflows."
+    badgeText: "Generative AI",
+    badgeColor: "blue",
+    featured: false,
+    description: "Exploring RAG systems, vector embeddings, LangChain pipelines, and emerging LLM agentic patterns.",
+    tags: ["RAG Systems", "LangChain", "Agentic AI"]
   },
   {
-    topic: "Java & Enterprise Software",
-    icon: "⚙️",
-    description: "Java architecture, OOP principles, and robust backend engineering."
-  },
-  {
+    id: "focus-edge",
     topic: "Deep Learning & Edge AI",
     icon: "🧠",
-    description: "CNN transfer learning, model quantization, and local edge inference."
+    badgeText: "Edge Computing",
+    badgeColor: "peach",
+    featured: false,
+    description: "Investigating CNN transfer learning, model quantization, and low-latency offline inference on resource-constrained devices.",
+    tags: ["PyTorch", "CNNs", "Model Optimization"]
   },
   {
+    id: "focus-dsa",
     topic: "Data Structures & Algorithms",
     icon: "⚡",
-    description: "Algorithmic problem-solving, time/space optimization, and DSA patterns."
+    badgeText: "Problem Solving",
+    badgeColor: "yellow",
+    featured: false,
+    description: "Continuous problem-solving on LeetCode focusing on algorithmic efficiency, optimization logic, and core DSA patterns.",
+    tags: ["LeetCode", "DSA", "Optimization"]
   }
 ];
 
