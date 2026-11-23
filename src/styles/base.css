@@ -130,22 +130,22 @@ ul, ol {
 }
 
 .section {
-  padding-top: var(--space-20);
-  padding-bottom: var(--space-20);
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding-top: var(--space-12);
-    padding-bottom: var(--space-12);
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
   }
 }
 
 /* Section Header Typography */
 .section-header {
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-6);
 }
 
 .section-index {

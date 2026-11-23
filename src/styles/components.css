@@ -156,28 +156,35 @@
    01. HERO SECTION
    ========================================================================== */
 .hero-section {
-  padding-top: var(--space-16);
-  padding-bottom: var(--space-16);
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+  }
 }
 
 .hero-layout {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: var(--space-12);
+  gap: var(--space-10);
   align-items: center;
 }
 
 @media (max-width: 840px) {
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: var(--space-8);
+    gap: var(--space-6);
   }
 }
 
 .hero-status-pill {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
 }
 
 .hero-title {
@@ -200,11 +207,11 @@
 }
 
 .hero-subtitle {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   color: var(--text-secondary);
   max-width: 620px;
   line-height: var(--lh-body);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-5);
 }
 
 .hero-ctas {
@@ -212,7 +219,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-4);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-5);
 }
 
 .btn-primary {
@@ -425,13 +432,13 @@
 .other-categories-stack {
   display: flex;
   flex-direction: column;
-  gap: var(--space-10);
+  gap: var(--space-6);
 }
 
 .other-category-block {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .other-category-title {
@@ -581,70 +588,126 @@
 }
 
 /* ==========================================================================
-   04. SKILLS MATRIX
+   04. SKILLS SECTION (CARD GRID WITH MODERN PILL TAGS)
    ========================================================================== */
+.skills-cards-grid,
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: var(--space-6);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .skills-cards-grid,
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-cards-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skill-category-card {
-  background: linear-gradient(145deg, #FFFFFF 70%, #F8FAFC 100%);
+  background: linear-gradient(145deg, #FFFFFF 70%, #FBFBFC 100%);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: var(--space-6);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.skill-category-card.primary-category {
+.skill-category-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-sm);
+}
+
+.skill-category-card.primary-category-card {
   border-color: var(--pastel-lavender-border);
   background: linear-gradient(145deg, #FFFFFF 50%, #FAF5FF 100%);
 }
 
-.category-title-bar {
+.skill-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-4);
   padding-bottom: var(--space-3);
+  margin-bottom: var(--space-3);
   border-bottom: 1px solid var(--border-subtle);
 }
 
-.category-name {
+.skill-card-title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.skill-category-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.skill-category-title {
   font-family: var(--font-heading);
   font-size: var(--font-size-base);
   font-weight: 700;
   color: var(--text-primary);
 }
 
-.skill-tags-wrapper {
+.skill-tags-flex {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
+  gap: 8px;
 }
 
-.java-hero-box {
-  background-color: var(--pastel-lavender-bg);
-  border: 1px solid var(--pastel-lavender-border);
-  border-radius: var(--radius-sm);
-  padding: var(--space-4);
-  margin-bottom: var(--space-4);
-}
-
-.java-hero-title {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-lg);
-  font-weight: 800;
-  color: var(--pastel-lavender-text);
-  display: flex;
+.skill-badge {
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background-color: #FFFFFF;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
 }
 
-.java-hero-desc {
-  font-size: var(--font-size-xs);
-  color: var(--text-secondary);
-  margin-top: 4px;
+.skill-badge:hover {
+  transform: translateY(-1px);
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+  background-color: var(--bg-subtle);
+}
+
+.skill-badge-primary {
+  background-color: var(--pastel-lavender-bg);
+  color: var(--pastel-lavender-text);
+  border-color: var(--pastel-lavender-border);
+  font-weight: 600;
+}
+
+.skill-badge-primary:hover {
+  background-color: #E9D5FF;
+  border-color: #D8B4FE;
+  color: #581C87;
+}
+
+.skill-badge-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.skill-badge-text {
+  line-height: 1.2;
 }
 
 /* ==========================================================================
@@ -755,42 +818,63 @@
 }
 
 /* ==========================================================================
-   06. CURRENTLY LEARNING
+   06. CURRENTLY LEARNING (SINGLE-ROW COMPACT FOCUS CARDS)
    ========================================================================== */
 .learning-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-5);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
   width: 100%;
 }
 
+@media (max-width: 960px) {
+  .learning-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .learning-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
 .learning-card {
-  background: linear-gradient(145deg, #FFFFFF 60%, #FDF4FF 100%);
+  background: linear-gradient(145deg, #FFFFFF 65%, #FAF5FF 100%);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: var(--space-6);
-  transition: transform var(--transition-fast);
+  padding: 14px 14px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .learning-card:hover {
   transform: translateY(-2px);
+  border-color: var(--pastel-lavender-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .learning-icon {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--space-3);
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+  line-height: 1;
 }
 
 .learning-topic {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-xs);
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: var(--space-2);
+  margin-bottom: 4px;
+  line-height: 1.35;
 }
 
 .learning-desc {
-  font-size: var(--font-size-xs);
-  color: var(--text-secondary);
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.45;
 }
 
 /* ==========================================================================

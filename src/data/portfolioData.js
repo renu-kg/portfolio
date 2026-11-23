@@ -48,7 +48,7 @@ export const selectedProjects = [
     featured: true,
     accentColor: "blue",
     badgeText: "Featured Project · AI / RAG",
-    description: "An AI-powered study assistant designed to support students throughout their learning journey — from goal-based planning to revision. Leverages Retrieval-Augmented Generation (RAG) over user-uploaded materials to explain concepts, generate quizzes, and track performance.",
+    description: "AI study assistant using RAG over uploaded documents to explain concepts, generate quizzes, and track study milestones.",
     keyCapabilities: [
       "Personalized study plan creation based on goals, deadlines, and study time",
       "Concept explanations using RAG on user-uploaded document materials",
@@ -84,7 +84,7 @@ export const selectedProjects = [
     featured: false,
     accentColor: "sage",
     badgeText: "DBMS Mini Project",
-    description: "A basic web application for recording and managing personal expenses and budget limits. Implements structured database connectivity, secure form handling, and relational data retrieval.",
+    description: "Web-based personal finance tracker for logging transactions, monitoring category spending, and managing budget limits using MySQL.",
     keyCapabilities: [
       "Record daily expenses and manage budget limits",
       "Structured database connectivity and form handling",
@@ -119,7 +119,7 @@ export const selectedProjects = [
     featured: false,
     accentColor: "lavender",
     badgeText: "Algorithms & DSA",
-    description: "A financial settlement system developed during Visa / TOP training designed to minimize net cash transactions among a group of participants using greedy optimization logic.",
+    description: "Algorithmic cashflow settlement system built during Visa / TOP training, using greedy optimization to minimize peer-to-peer transactions.",
     keyCapabilities: [
       "Creditor and debtor settlement optimization logic",
       "Greedy algorithm approach to minimize transaction count",
@@ -154,7 +154,7 @@ export const selectedProjects = [
     featured: false,
     accentColor: "peach",
     badgeText: "In Progress · Major Project",
-    description: "An Edge-AI enabled deep learning system that analyzes chest X-ray images using CNN-based transfer learning to identify patterns associated with pneumonia, optimized for local offline inference on edge devices.",
+    description: "Deep learning system using CNN transfer learning to detect pneumonia in chest X-rays, optimized for local offline inference on edge hardware.",
     keyCapabilities: [
       "CNN-based classification & transfer learning architecture comparison",
       "Model selection and optimization for resource-constrained edge devices",
@@ -314,7 +314,7 @@ export const categorizedOtherProjects = [
       {
         id: "deeplearn-1",
         title: "AI Skill Analyzer — UptoSkills",
-        description: "An AI-powered backend system developed during my UptoSkills Deep Learning internship that analyzes intern performance data from CSV, detects skill mastery and efficiency drops, generates intelligent mentor feedback using Google Gemini AI, stores reports in MongoDB Atlas, and exposes the pipeline through a FastAPI REST API.",
+        description: "AI backend analyzing intern performance data from CSV, identifying skill mastery drops, and generating Gemini AI mentor feedback via FastAPI and MongoDB Atlas.",
         techStack: ["Python", "FastAPI", "Google Gemini AI", "MongoDB Atlas", "Pandas", "Uvicorn"],
         links: {
           github: "https://github.com/renu-kg/AI-Skill-Analyzer-UptoSkills",
@@ -476,40 +476,81 @@ export const certificatesData = [
 
 export const skillsGrouped = [
   {
-    category: "PRIMARY",
+    category: "Programming Languages",
+    icon: "💻",
     isPrimary: true,
     accent: "lavender",
-    skills: ["Java"]
+    skills: [
+      { name: "Java", isPrimary: true, icon: "☕" },
+      { name: "Python", icon: "🐍" },
+      { name: "C", icon: "⚡" },
+      { name: "JavaScript", icon: "🌐" }
+    ]
   },
   {
-    category: "PROGRAMMING",
-    accent: "blue",
-    skills: ["Python", "C", "JavaScript"]
-  },
-  {
-    category: "WEB",
-    accent: "blue",
-    skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP"]
-  },
-  {
-    category: "DATA",
-    accent: "sage",
-    skills: ["SQL", "MySQL", "MongoDB", "PostgreSQL (Basic)"]
-  },
-  {
-    category: "AI / ML",
+    category: "AI, ML & Deep Learning",
+    icon: "🧠",
     accent: "peach",
-    skills: ["LangChain", "FAISS", "RAG", "Groq LLM", "GPT-2", "Stable Diffusion XL"]
+    skills: [
+      { name: "LangChain", icon: "🤖" },
+      { name: "RAG Architecture", icon: "⚡" },
+      { name: "FAISS Vector Search", icon: "🔍" },
+      { name: "PyTorch & CNNs", icon: "🔥" },
+      { name: "Google Gemini AI", icon: "✨" },
+      { name: "Groq LLM", icon: "💬" },
+      { name: "Stable Diffusion XL", icon: "🎨" },
+      { name: "GPT-2", icon: "📝" }
+    ]
   },
   {
-    category: "TOOLS",
-    accent: "lavender",
-    skills: ["Git", "GitHub", "AWS", "Streamlit", "VS Code"]
+    category: "Web Technologies",
+    icon: "🌐",
+    accent: "blue",
+    skills: [
+      { name: "HTML5", icon: "🌐" },
+      { name: "CSS3", icon: "🎨" },
+      { name: "JavaScript (ES6+)", icon: "⚡" },
+      { name: "Bootstrap", icon: "🅱️" },
+      { name: "PHP", icon: "🐘" },
+      { name: "FastAPI / REST APIs", icon: "🚀" }
+    ]
   },
   {
-    category: "CORE CS",
+    category: "Databases & Data Engineering",
+    icon: "🗄️",
     accent: "sage",
-    skills: ["OOP", "DSA", "DBMS", "Operating Systems", "Computer Networks", "Algorithms"]
+    skills: [
+      { name: "MySQL", icon: "🐬" },
+      { name: "SQL", icon: "📊" },
+      { name: "MongoDB Atlas", icon: "🍃" },
+      { name: "StarRocks (ETL/BI)", icon: "⭐" },
+      { name: "PostgreSQL", icon: "🐘" }
+    ]
+  },
+  {
+    category: "Developer Tools & Cloud",
+    icon: "🛠️",
+    accent: "yellow",
+    skills: [
+      { name: "Git", icon: "🐙" },
+      { name: "GitHub", icon: "🐙" },
+      { name: "Streamlit", icon: "⚡" },
+      { name: "AWS (Basics)", icon: "☁️" },
+      { name: "VS Code", icon: "💻" },
+      { name: "Linux", icon: "🐧" }
+    ]
+  },
+  {
+    category: "Core Computer Science",
+    icon: "📚",
+    accent: "mint",
+    skills: [
+      { name: "OOP (Object-Oriented Design)", icon: "🧩" },
+      { name: "Data Structures & Algorithms", icon: "⚡" },
+      { name: "DBMS", icon: "🗄️" },
+      { name: "Operating Systems", icon: "💻" },
+      { name: "Computer Networks", icon: "🌐" }
+    ]
   }
 ];
 
@@ -535,29 +576,29 @@ export const educationData = {
 
 export const currentlyLearning = [
   {
-    topic: "Business Intelligence & ETL Workflows",
+    topic: "Business Intelligence & ETL",
     icon: "📊",
-    description: "Enterprise data pipelines, ETL architectures, and analytics data warehousing with StarRocks at Atlas Systems."
+    description: "Enterprise data pipelines, ETL architectures, and StarRocks analytics at Atlas Systems."
   },
   {
-    topic: "AI/ML Trends & Emerging Architectures",
+    topic: "AI/ML & Agentic Architectures",
     icon: "✨",
-    description: "Tracking modern breakthroughs in generative AI, multimodal models, and emerging agentic workflows."
+    description: "Generative models, multimodal systems, and emerging agentic workflows."
   },
   {
-    topic: "Java & Enterprise Software Systems",
+    topic: "Java & Enterprise Software",
     icon: "⚙️",
-    description: "Deepening Java ecosystem architecture, OOP principles, and robust backend application design."
+    description: "Java architecture, OOP principles, and robust backend engineering."
   },
   {
     topic: "Deep Learning & Edge AI",
     icon: "🧠",
-    description: "Exploring CNN transfer learning, model quantization, and local offline inference on edge hardware."
+    description: "CNN transfer learning, model quantization, and local edge inference."
   },
   {
-    topic: "Advanced Data Structures & Algorithms",
+    topic: "Data Structures & Algorithms",
     icon: "⚡",
-    description: "Continuous algorithmic problem-solving practice, time/space optimization, and DSA patterns."
+    description: "Algorithmic problem-solving, time/space optimization, and DSA patterns."
   }
 ];
 

@@ -5,7 +5,7 @@ export default function Learning() {
   return (
     <section id="learning" className="section reveal-on-scroll">
       <div className="container">
-        <div className="section-header" style={{ marginBottom: '32px' }}>
+        <div className="section-header" style={{ marginBottom: '18px' }}>
           <div className="section-index">08 · Currently Learning</div>
           <h2 className="section-title">Active Areas of Focus</h2>
         </div>

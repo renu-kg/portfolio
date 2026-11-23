@@ -61,14 +61,6 @@ export default function Projects() {
                     <h3 className="card-title">{featured.title}</h3>
                     <div className="card-subtitle">{featured.subtitle}</div>
                     <p className="card-description">{featured.description}</p>
-
-                    <div className="card-bullets">
-                      {featured.keyCapabilities.map((bullet, idx) => (
-                        <div key={idx} className="card-bullet-item">
-                          <span>{bullet}</span>
-                        </div>
-                      ))}
-                    </div>
                   </div>
 
                   <div>
@@ -126,14 +118,6 @@ export default function Projects() {
                         <h3 className="card-title">{proj.title}</h3>
                         <div className="card-subtitle">{proj.subtitle}</div>
                         <p className="card-description">{proj.description}</p>
-
-                        <div className="card-bullets">
-                          {proj.keyCapabilities.map((bullet, idx) => (
-                            <div key={idx} className="card-bullet-item">
-                              <span>{bullet}</span>
-                            </div>
-                          ))}
-                        </div>
                       </div>
 
                       <div>
@@ -198,14 +182,6 @@ export default function Projects() {
                 <h3 className="card-title">{proj.title}</h3>
                 <div className="card-subtitle">{proj.subtitle}</div>
                 <p className="card-description">{proj.description}</p>
-
-                <div className="card-bullets">
-                  {proj.keyCapabilities.map((bullet, idx) => (
-                    <div key={idx} className="card-bullet-item">
-                      <span>{bullet}</span>
-                    </div>
-                  ))}
-                </div>
 
                 <div className="card-tags">
                   {proj.techStack.map((tech) => (
