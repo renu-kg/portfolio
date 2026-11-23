@@ -184,157 +184,99 @@ export const selectedProjects = [
   }
 ];
 
+export const aiProjects = [
+  {
+    id: "deeplearn-1",
+    title: "AI Skill Analyzer — UptoSkills",
+    description: "FastAPI backend evaluating intern CSV performance with Gemini AI to generate automated mentor reports.",
+    techStack: ["Python", "FastAPI", "Gemini AI", "MongoDB Atlas"],
+    links: {
+      github: "https://github.com/renu-kg/AI-Skill-Analyzer-UptoSkills",
+      demo: "",
+      linkedin: ""
+    }
+  },
+  {
+    id: "genai-group",
+    title: "Prodigy InfoTech — Generative AI Tasks",
+    description: "Hands-on generative tasks exploring Markov chains, GPT-2 fine-tuning, SDXL text-to-image, and style transfer.",
+    techStack: ["Python", "PyTorch", "Diffusers", "Transformers"],
+    taskLinks: [
+      { label: "Task 01 ↗", url: "https://github.com/renu-kg/PRODIGY_GA_01" },
+      { label: "Task 02 ↗", url: "https://github.com/renu-kg/PRODIGY_GA_02" },
+      { label: "Task 03 ↗", url: "https://github.com/renu-kg/PRODIGY_GA_03" },
+      { label: "Task 05 ↗", url: "https://github.com/renu-kg/PRODIGY_GA_05" }
+    ]
+  }
+];
+
+export const webUtilities = [
+  {
+    id: "web-1",
+    title: "Register Validation Form",
+    links: {
+      github: "https://github.com/renu-kg/Register-validation-form",
+      demo: "https://register-validation-form.netlify.app/"
+    }
+  },
+  {
+    id: "web-2",
+    title: "My Todo List",
+    links: {
+      github: "https://github.com/renu-kg/My-Todo-List",
+      demo: "https://renu-todo-list.netlify.app/"
+    }
+  },
+  {
+    id: "web-3",
+    title: "Simple Calculator",
+    links: {
+      github: "https://github.com/renu-kg/Simple-Calculator",
+      demo: "https://calculator-renukg.netlify.app/"
+    }
+  },
+  {
+    id: "web-4",
+    title: "Login Page Practice",
+    links: {
+      github: "https://github.com/renu-kg/loginPagePractice"
+    }
+  },
+  {
+    id: "web-5",
+    title: "Tic-Tac-Toe",
+    links: {
+      github: "https://github.com/renu-kg/Tic-Tac-Toe",
+      demo: "https://renu-kg.github.io/Tic-Tac-Toe/"
+    }
+  },
+  {
+    id: "web-6",
+    title: "Rock Paper Scissors",
+    links: {
+      github: "https://github.com/renu-kg/Rock-Paper-Scissors",
+      demo: "https://renu-kg.github.io/Rock-Paper-Scissors/"
+    }
+  },
+  {
+    id: "web-7",
+    title: "Currency Converter",
+    links: {
+      github: "https://github.com/renu-kg/Currency-converter"
+    }
+  }
+];
+
 export const categorizedOtherProjects = [
   {
     categoryTitle: "AI, Deep Learning & Generative Models",
     categoryKey: "ai-dl-generative",
-    projects: [
-      {
-        id: "deeplearn-1",
-        title: "AI Skill Analyzer — UptoSkills",
-        description: "FastAPI backend evaluating intern CSV data with Gemini AI to generate automated feedback reports.",
-        techStack: ["Python", "FastAPI", "Gemini AI", "MongoDB Atlas"],
-        links: {
-          github: "https://github.com/renu-kg/AI-Skill-Analyzer-UptoSkills",
-          demo: "",
-          linkedin: ""
-        }
-      },
-      {
-        id: "genai-group",
-        title: "Prodigy InfoTech — Generative AI Tasks",
-        description: "Hands-on generative tasks exploring Markov chains, GPT-2 fine-tuning, SDXL, and style transfer.",
-        techStack: ["Python", "PyTorch", "Diffusers", "Transformers"],
-        taskLinks: [
-          { label: "Task 01 ↗", url: "https://github.com/renu-kg/PRODIGY_GA_01" },
-          { label: "Task 02 ↗", url: "https://github.com/renu-kg/PRODIGY_GA_02" },
-          { label: "Task 03 ↗", url: "https://github.com/renu-kg/PRODIGY_GA_03" },
-          { label: "Task 05 ↗", url: "https://github.com/renu-kg/PRODIGY_GA_05" }
-        ]
-      }
-    ]
-  },
-  {
-    categoryTitle: "Algorithms & Systems",
-    categoryKey: "algorithms-systems",
-    projects: [
-      {
-        id: "algo-1",
-        title: "Dynamic Video Streaming Optimizer",
-        description: "Algorithmic chunk delivery using dynamic bitrate allocation strategies.",
-        techStack: ["C", "DSA", "Optimization"],
-        links: {
-          github: "https://github.com/renu-kg/dynamic-video-streaming-optimizer",
-          demo: "",
-          linkedin: ""
-        }
-      },
-      {
-        id: "algo-2",
-        title: "Distributed Server Load Balancer",
-        description: "System load balancer distributing incoming traffic across server clusters.",
-        techStack: ["C", "DSA", "Load Balancing"],
-        links: {
-          github: "https://github.com/renu-kg/distributed-server-load-balancer-optimizer",
-          demo: "",
-          linkedin: ""
-        }
-      },
-      {
-        id: "algo-3",
-        title: "Heap Parking Allocator",
-        description: "Memory-efficient parking allocation system using min/max heaps.",
-        techStack: ["C", "DSA", "Heaps"],
-        links: {
-          github: "https://github.com/renu-kg/heap-parking-allocator",
-          demo: "",
-          linkedin: ""
-        }
-      }
-    ]
+    projects: aiProjects
   },
   {
     categoryTitle: "Web & Interactive Utilities",
     categoryKey: "web-interactive",
-    projects: [
-      {
-        id: "web-1",
-        title: "Register Validation Form",
-        description: "Responsive registration interface with real-time input validation.",
-        techStack: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-        links: {
-          github: "https://github.com/renu-kg/Register-validation-form",
-          demo: "https://register-validation-form.netlify.app/",
-          linkedin: ""
-        }
-      },
-      {
-        id: "web-2",
-        title: "My Todo List",
-        description: "Task manager with local persistence and status toggling.",
-        techStack: ["HTML", "CSS", "JavaScript"],
-        links: {
-          github: "https://github.com/renu-kg/My-Todo-List",
-          demo: "https://renu-todo-list.netlify.app/",
-          linkedin: ""
-        }
-      },
-      {
-        id: "web-3",
-        title: "Simple Calculator",
-        description: "Responsive calculator for arithmetic and percentage calculations.",
-        techStack: ["HTML", "CSS", "JavaScript"],
-        links: {
-          github: "https://github.com/renu-kg/Simple-Calculator",
-          demo: "https://calculator-renukg.netlify.app/",
-          linkedin: ""
-        }
-      },
-      {
-        id: "web-4",
-        title: "Login Page Practice",
-        description: "Clean responsive authentication form layout and input styling.",
-        techStack: ["HTML", "CSS"],
-        links: {
-          github: "https://github.com/renu-kg/loginPagePractice",
-          demo: "",
-          linkedin: ""
-        }
-      },
-      {
-        id: "web-5",
-        title: "Tic-Tac-Toe",
-        description: "Two-player browser game with turn and win detection logic.",
-        techStack: ["HTML", "CSS", "JavaScript"],
-        links: {
-          github: "https://github.com/renu-kg/Tic-Tac-Toe",
-          demo: "https://renu-kg.github.io/Tic-Tac-Toe/",
-          linkedin: ""
-        }
-      },
-      {
-        id: "web-6",
-        title: "Rock Paper Scissors",
-        description: "Interactive browser game with computer move selection and score tracker.",
-        techStack: ["HTML", "CSS", "JavaScript"],
-        links: {
-          github: "https://github.com/renu-kg/Rock-Paper-Scissors",
-          demo: "https://renu-kg.github.io/Rock-Paper-Scissors/",
-          linkedin: ""
-        }
-      },
-      {
-        id: "web-7",
-        title: "Currency Converter",
-        description: "Real-time exchange rate calculation utility for foreign currencies.",
-        techStack: ["HTML", "CSS", "JavaScript"],
-        links: {
-          github: "https://github.com/renu-kg/Currency-converter",
-          demo: "",
-          linkedin: ""
-        }
-      }
-    ]
+    projects: webUtilities
   }
 ];
 
